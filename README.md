@@ -35,7 +35,7 @@ Caused by: org.springframework.web.reactive.function.client.WebClientResponseExc
   
 ## Fix:
  
-Configure codec with higher 
+Configure codec with higher memroy config:
  
     @Value("${client.max-in-memory-size}")
     private DataSize dataSize;
