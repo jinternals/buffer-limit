@@ -23,7 +23,7 @@ public class Application implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		WebClient client = builder.build();
 
-		Mono<PersonCollection> personCollectionMono = client.get().uri("/demo").retrieve().bodyToMono(PersonCollection.class);
+		Mono<PersonCollection> personCollectionMono = client.get().uri("/persons").retrieve().bodyToMono(PersonCollection.class);
 
 		PersonCollection personCollection = personCollectionMono.block();
 
